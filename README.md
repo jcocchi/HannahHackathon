@@ -49,7 +49,7 @@ Follow [this guide](https://docs.microsoft.com/en-us/azure/storage/common/storag
 Create a table to store all of the azure codes for the event. 
 - Name: `AzureCredits`
 - Required Columns
-    - `Partition Key` The values here will always be `Credits`
+    - `Partition Key` The values here will always be `Credit`
     - `Row Key` The azure code, it is primary key for the table
     - `Used` Boolean value to represent whether the credit has been given out or not
     - `Timestamp`
@@ -57,7 +57,7 @@ Create a table to store all of the azure codes for the event.
 Create a second table to store the student information.
 - Name: `AzureCreditStudents`
 - Required Columns
-    - `Partion Key` The values here will always be `Student`
+    - `Partition Key` The values here will always be `Student`
     - `Row Key` The student's email, it is the primary key for the table
     - `AzureCode` The code that was assigned to the student
     - `Name`
@@ -73,6 +73,7 @@ There are several variables that need to be set in order for the app to run prop
 - APP_PASS= The app password that you got after you register your bot on [botframework.com](https://botframework.com)
 - LUIS_ID= The id for your [https://luis.ai](LUIS) model
 - LUIS_KEY= The subscription key for your [https://luis.ai](LUIS) model
+- LUIS_ENDPOINT= The endpoint for your [https://luis.ai](LUIS) model 
 - EMAIL_PASS= The password for the email account you will send confirmation emails from
 - EMAIL_USERNAME= The email account you will send confirmation emails from
 - AZURE_STORE_CONNSTR= The primary connection string for your storage account (obtainment and setup info above)
