@@ -7,8 +7,7 @@ lib.dialog('/', [
     session.endDialog('I can help you get an Azure Code, find resources, or connect you with our Microsoft team! What would you like help with?')
   }
 ]).triggerAction({
-  matches: 'greeting',
-  intentThreshold: 0.8
+  matches: 'greeting'
 })
 
 module.exports.createLibrary = function () {
