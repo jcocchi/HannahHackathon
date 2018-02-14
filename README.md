@@ -9,7 +9,7 @@ Hannah was built to assist with hackathons! She has 3 main capabilities:
 ## Customize Her to Your Needs
 You can customize the technologies and team members for each hackathon so Hannah can be more reusable. 
 
-Hannah's hackathon specific settings are in the `data/hackSpecificData.js` file. You can customize the data for each hackathon by modifying the data in the following format. Please make sure you keep the appropriate article preceding the hack prize for the bot's grammar to make sense. Each team member will be picked up by the `app/dialogs/teamInfo` dialog and added to the card of team members automatically.
+Hannah's hackathon specific settings are in the `data/hackSpecificData.js` file. You can customize the data for each hackathon by modifying the data in the following format. Please make sure you keep the appropriate article preceding the hack prize and the appropriate preposition preceding the booth location for the bot's grammar to make sense. Each team member will be picked up by the `app/dialogs/teamInfo` dialog and added to the card of team members automatically.
 
 ```javascript
 {

@@ -41,7 +41,7 @@ lib.dialog('/', [
     })
 
     // If we didn't end the dialog, something went wrong
-    session.endDialog(`If I can't help you with any of your needs you can head to our booth and talk with someone or email the team at ${hackData.teamEmail}`)
+    session.endDialog(`If I can't help you with any of your needs you can head to our booth ${hackData.boothLocation} and talk with someone or email the team at ${hackData.teamEmail}`)
   }
 ]).triggerAction({
   matches: 'techHelp'
