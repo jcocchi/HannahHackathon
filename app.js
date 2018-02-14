@@ -17,7 +17,7 @@ const connector = new builder.ChatConnector({
 const bot = new builder.UniversalBot(connector)
 server.post('/api/messages', connector.listen())
 
-const model = `https://api.projectoxford.ai/luis/v1/application?id=${process.env.LUIS_ID}&subscription-key=${process.env.LUIS_KEY}&verbose=true`
+const model = process.env.LUIS_ENDPOINT
 bot.recognizer(new builder.LuisRecognizer(model))
 
 bot.dialog('/', [
@@ -36,6 +36,7 @@ bot.library(require('./app/dialogs/profanity').createLibrary())
 bot.library(require('./app/dialogs/azureCodeError').createLibrary())
 bot.library(require('./app/dialogs/endConvo').createLibrary())
 bot.library(require('./app/dialogs/botHelp').createLibrary())
+bot.library(require('./app/dialogs/boothLocation').createLibrary())
 bot.library(require('./app/dialogs/none').createLibrary())
 
 // TODO add server proxy for ifame
