@@ -67,7 +67,7 @@ Create a second table to store the student information.
     - `Timestamp`
 
 ### Set up Your Environment Variables
-There are several variables that need to be set in order for the app to run properly. Start by creating a `.env` file in the root directory, use the `.env.example` as a template for the values you need.
+There are several variables that need to be set in order for the app to run properly. For local testing, start by creating a `.env` file in the root directory, use the `.env.example` as a template for the values you need. When you deploy the bot to Azure be sure to enter these key value pairs in Application Settings to be configured as environment variables in your deployed app as the `.env` file only works locally.
 
 - APP_ID= The app id that you got after you register your bot on [botframework.com](https://botframework.com)
 - APP_PASS= The app password that you got after you register your bot on [botframework.com](https://botframework.com)

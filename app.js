@@ -39,7 +39,7 @@ bot.library(require('./app/dialogs/botHelp').createLibrary())
 bot.library(require('./app/dialogs/boothLocation').createLibrary())
 bot.library(require('./app/dialogs/none').createLibrary())
 
-// TODO add server proxy for ifame
+// TODO add server proxy for iframe
 server.get(/\/?.*/, restify.plugins.serveStatic({
   directory: __dirname,
   default: 'index.html'
