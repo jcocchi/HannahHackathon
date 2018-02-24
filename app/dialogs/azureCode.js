@@ -50,7 +50,7 @@ lib.dialog('/school', [
 
 lib.dialog('/email', [
   function (session) {
-    builder.Prompts.text(session, 'What\'s your email address? We will send your pass to the email you provide and gaurantee to not use it for any other purpose.')
+    builder.Prompts.text(session, 'What\'s your email address?')
   },
   function (session, results) {
     if (validator.isEmail(results.response)) {
@@ -91,9 +91,8 @@ lib.dialog('/pass', [
     // args(callIfUnique, callIfNotUnique, next)
     table.getPassOnlyOnUniqueEmail(session, function ifUnique () {
       table.retrievePass(session, function (session) {
-        session.endDialog(`Great! Here is your Azure pass: ${session.userData.code}. 
-          You will also get a confirmation email with your Azure pass. 
-          To activate: Go to http://www.microsoftazurepass.com/ and paste in this number and dont forget to fill out our survey ${hackData.surveyLink} for a chance to win ${hackData.prize}. 
+        session.endDialog(`Great! Here is your Azure pass: ${session.userData.code}.
+          To activate: Go to http://www.microsoftazurepass.com/ and paste in this number, and don't forget to fill out our survey ${hackData.surveyLink} for a chance to win ${hackData.prize}. 
           Good luck!`)
       }, next)
     }, function ifNotUnique (next) {
